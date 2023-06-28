@@ -1,0 +1,94 @@
+@import "../../../gloabalcss/genral.scss";
+@import "../../../gloabalcss/fonts";
+
+.navbar {
+  .devlinks {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+    .link {
+      @extend .global-link;
+    }
+  }
+  .logout {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    background: #040f16;
+    border: 0.5px solid #c0c0c0;
+    border-radius: 7px;
+
+    .linklogout {
+      padding-right: 20px;
+      padding-left: 10px;
+      @extend .global-link;
+    }
+
+    .icondiv {
+      padding-right: 10px;
+      position: relative;
+      display: flex;
+      border-left: 0.5px solid #c0c0c0;
+
+      &:hover {
+        background-color: #ffffff;
+      }
+      .iconlink {
+        overflow: visible;
+        .icon {
+          position: relative;
+          left: 5px;
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
+.projects {
+  padding-left: 2.86%;
+  display: flex;
+  flex-direction: row;
+  background-color: #040f16;
+  color: white;
+  align-items: center;
+  gap: 6px;
+  .heading {
+    font-family: "Inconsolata";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  .projectlist {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 44px;
+    li {
+      color: #000;
+      background: #ffffff;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius: 30px;
+      font-family: "Mate SC";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 23px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.devlist {
+  position: relative;
+  background-image: url("../../assets/formback1.png");
+  height: 60.65%;
+  width: 17.71%;
+  top: -95px;
+  color: white;
+  overflow-y: scroll;
+  animation-name: smalltobig;
+  animation-duration: 0.4s;
+
+  @keyframes smalltobig {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+  .heading {
+    // background-image: url("../../assets/formback1.png");
+    // margin-top: 2.8%;
+    // margin-bottom: 7.8%;
+    // text-align: center;
+    // font-family: "Mate SC";
+    // font-style: normal;
+    // font-weight: 400;
+    // font-size: 35px;
+    // line-height: 43px;
+    // overflow-y: hidden;
+    background-image: url("../../assets/formback1.png");
+    z-index: 5;
+    margin-top: 2.8%;
+    margin-bottom: 7.8%;
+    text-align: center;
+    font-family: "Mate SC";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+    overflow-y: hidden;
+    position: sticky;
+    top: 0;
+  }
+  .devnames {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+    overflow-y: scroll;
+    li {
+      border: 1px solid white;
+      width: 87.65%;
+      text-align: center;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 37px;
+      border: 1px solid white;
+      .indexvalue {
+        position: absolute;
+        left: 11px;
+      }
+      .del {
+        position: absolute;
+        right: 11px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

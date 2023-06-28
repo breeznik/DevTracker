@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+.subdash {
+  width: 729px;
+  height: 707px;
+  position: relative;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../assets/darkgrad21.png"),
+    url("../../assets/sidedark1.png");
+  .projectName {
+    margin-top: 17px;
+    overflow: visible;
+    width: 109px;
+    height: 37px;
+    font-family: "Mate SC";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+  }
+  .subth-moduleheading {
+    overflow: visible;
+    margin-top: 60px;
+    width: 88px;
+    height: 27px;
+    font-family: "Mate SC";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .subdata {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    .subTable {
+      .th {
+        position: sticky;
+        top: 0;
+        font-family: "Inconsolata";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .tableContent {
+        margin-top: 17px;
+        display: flex;
+        flex-direction: column;
+        height: 114px;
+        border-bottom: 1px solid #ffffff;
+        overflow: scroll;
+
+        .tr {
+          overflow: visible;
+          padding-top: 9px;
+          padding-bottom: 9px;
+          border-top: 1px solid #ffffff;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          font-family: "Inconsolata";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+
+          letter-spacing: 0.03em;
+
+          .submission {
+            flex: 1;
+            text-align: center;
+          }
+          .testscore {
+            position: relative;
+            flex: 1;
+            right: -13px;
+          }
+          .progress {
+            position: relative;
+            overflow: visible;
+            display: flex;
+            flex-direction: row;
+            font-family: Georgia, Times, Times New Roman, serif;
+            flex: 1;
+            gap: 5px;
+            left: -35px;
+            align-items: center;
+            .progress-bar {
+              width: 63px;
+              height: 10px;
+              background-color: #f2f2f2;
+              border-radius: 10px;
+              overflow: hidden;
+            }
+            .progress-bar-fill {
+              height: 100%;
+              background-color: #05d9ff;
+              transition: width 0.3s ease-in-out;
+            }
+          }
+          .modname {
+            flex: 1.2;
+          }
+          .index {
+            flex: 0.7;
+          }
+        }
+      }
+    }
+
+    .subth-Discription {
+      overflow: visible;
+      width: 100%;
+      height: 27px;
+      font-family: "Mate SC";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 27px;
+      border: none;
+    }
+    .discription {
+      overflow: visible;
+      left: 10px;
+      position: relative;
+      font-family: "Inconsolata";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 17px;
+      letter-spacing: 0.03em;
+      height: fit-content;
+    }
+    .subth-AssignedDev {
+      overflow: visible;
+      font-family: "Mate SC";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 27px;
+      color: #ffffff;
+    }
+    .devnames {
+      font-family: "Cutive Mono";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 21px;
+      /* identical to box height */
+      color: #000000;
+      display: flex;
+      gap: 31px;
+      span {
+        width: fit-content;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 16px;
+        padding-right: 16px;
+        background: #eff8e2;
+        border-radius: 30px;
+      }
+    }
+  }
+}

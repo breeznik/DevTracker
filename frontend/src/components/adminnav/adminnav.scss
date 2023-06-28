@@ -1,0 +1,14 @@
+@import "../../gloabalcss/fonts";
+@import "../../gloabalcss/genral";
+
+.navbar {
+  .adminlinks {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+    .link {
+      @extend .global-link;
+    }
+  }
+}

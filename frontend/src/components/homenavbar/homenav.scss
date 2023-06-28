@@ -1,0 +1,32 @@
+@import "../../gloabalcss/fonts";
+@import "../../gloabalcss/genral";
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Julius Sans One", sans-serif;
+  height: 8.89%;
+  padding: 25px 56px;
+  background: #040f16;
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    .link {
+      @extend .global-link;
+    }
+  }
+
+  .logo {
+    .link {
+      @extend .global-link;
+    }
+  }
+  .aboutus {
+    .link {
+      @extend .global-link;
+    }
+  }
+}
