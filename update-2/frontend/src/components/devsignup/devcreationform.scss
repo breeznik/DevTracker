@@ -1,0 +1,92 @@
+.devcreationform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  position: relative;
+  background-image: url("../../assets/loginform.png");
+  width: 36.51%;
+  height: 60.65%;
+  top: -95px;
+  border-radius: 5px;
+  animation-name: smalltobig;
+  animation-duration: 0.4s;
+
+  @keyframes smalltobig {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+  .heading {
+    margin-top: 2.8%;
+    margin-bottom: 7.8%;
+    text-align: center;
+    font-family: "Mate SC";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+  }
+  form {
+    position: relative;
+    height: 65.01%;
+    width: 70.23%;
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+    overflow: visible;
+    justify-content: center;
+
+    p {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 23px;
+      label {
+        font-family: "Inconsolata", monospace;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 22px;
+        margin-bottom: 7px;
+        letter-spacing: 2px;
+      }
+      input {
+        background: #f9f9f9;
+        border-radius: 5px;
+        width: 97.192%;
+        height: 36px;
+        padding-left: 1.404%;
+        padding-right: 1.404%;
+        align-self: center;
+        outline: none;
+        border: none;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+    }
+    button {
+      position: relative;
+      bottom: -30px;
+      width: 52.51%;
+      height: 12%;
+      border: none;
+      align-self: center;
+      background-color: black;
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border-radius: 5px;
+
+      &:active {
+        background-color: #ffffcc;
+        color: black;
+      }
+    }
+  }
+}

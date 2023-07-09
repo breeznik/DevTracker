@@ -1,0 +1,115 @@
+@import "../../../gloabalcss/fonts";
+@import "../../../gloabalcss/genral.scss";
+
+.addproject {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 93.3%;
+  background-color: #040f16;
+
+  .background {
+    position: relative;
+    top: -50px;
+    background-image: url("../../../assets/formback1.png");
+    width: 30.2%;
+    height: 72%;
+    font-family: "Inconsolata", monospace;
+    display: flex;
+    justify-content: center;
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .logo {
+        margin-top: 2.8%;
+        margin-bottom: 7.8%;
+        text-align: center;
+        font-family: "Mate SC";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 43px;
+      }
+      p {
+        display: flex;
+        flex-direction: column;
+        width: 78.7%;
+        overflow: visible;
+        margin-bottom: 22px;
+        label {
+          width: 195px;
+          overflow: visible;
+          font-family: "Inconsolata";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 27px;
+          line-height: 28px;
+        }
+        textarea {
+          background: #f9f9f9;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          max-width: 450.3px;
+          max-height: 145px;
+          min-height: 145px;
+          padding-top: 3px;
+          padding-left: 3px;
+          padding-right: 3px;
+          margin-top: 10px;
+          overflow-y: scroll;
+        }
+        input {
+          margin-top: 10px;
+          background: #f9f9f9;
+          border-radius: 5px;
+          width: 97.192%;
+          height: 36px;
+          padding-left: 1.404%;
+          padding-right: 1.404%;
+          align-self: center;
+          outline: none;
+          border: none;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+        }
+      }
+      button {
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 110%;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+
+        color: white;
+        margin-top: 48px;
+        width: 182px;
+        height: 49px;
+        border: none;
+        background: #000000;
+        border-radius: 5px;
+        &:active {
+          background-color: #ffffcc;
+          color: black;
+        }
+        img {
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          bottom: 5px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+      color: white;
+    }
+  }
+}

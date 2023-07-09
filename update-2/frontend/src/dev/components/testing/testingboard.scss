@@ -1,0 +1,150 @@
+.testboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  gap: 53px;
+
+  .background {
+    margin-top: 60px;
+    margin-bottom: 134px;
+    // width: 38.31%;
+    // height: 68.24%;
+    width: 367px;
+    height: 654px;
+    background-image: url("../../../assets/board2.png");
+
+    transition: all 0.4s ease-out;
+
+    .heading {
+      margin-top: 2.8%;
+      margin-bottom: 7.8%;
+      text-align: center;
+      font-family: "Mate SC";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 43px;
+    }
+    .modlist {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 17px;
+      li {
+        border: 1px solid white;
+        width: 87.65%;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 37px;
+        border: 1px solid white;
+      }
+    }
+  }
+  .testbackground {
+    animation-name: smalltobig;
+    animation-duration: 0.4s;
+
+    @keyframes smalltobig {
+      from {
+        transform: scale(0);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    margin-top: 60px;
+    margin-bottom: 134px;
+    // width: 38.31%;
+    // height: 68.24%;
+    width: 367px;
+    height: 654px;
+    background-image: url("../../../assets/board2.png");
+
+    .heading {
+      margin-top: 2.8%;
+      margin-bottom: 7.8%;
+      text-align: center;
+      font-family: "Mate SC";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 43px;
+    }
+    .testlist {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 17px;
+      li {
+        border: 1px solid white;
+        width: 87.65%;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 37px;
+        border: 1px solid white;
+
+        .checked {
+          position: absolute;
+          right: 9px;
+        }
+      }
+
+      .cleartext {
+        position: relative;
+        display: flex;
+        font-family: "Inconsolata";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 13px;
+        width: 87.65%;
+        display: flex;
+        justify-content: flex-end;
+        .clear {
+          border-bottom: 1px solid white;
+          padding-bottom: 2px;
+        }
+      }
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      button {
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 110%;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+
+        color: white;
+        margin-top: 48px;
+        width: 182px;
+        height: 49px;
+        border: none;
+        background: #000000;
+        border-radius: 5px;
+
+        &:active {
+          background-color: #ffffcc;
+          color: black;
+        }
+      }
+    }
+  }
+}
