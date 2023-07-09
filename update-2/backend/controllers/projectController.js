@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const Project = require("../models/projectmodel");
+const ProjectModel = require("../models/projectmodel");
 
 //@desc create a project
 //@routes POST /addproject
@@ -25,6 +26,7 @@ const createProject = asyncHandler(async (req, res) => {
     dueDate,
     modules,
     assignedDev,
+    historyState: false,
   });
 
   console.log(`project created ${project}`);
@@ -37,6 +39,8 @@ const createProject = asyncHandler(async (req, res) => {
         dueDate: project.dueDate,
         modules: project.modules,
         assignedDev: project.assignedDev,
+        historyState: project.historyState,
+        _id: project._id,
       },
     };
     res.status(201).json(projectinfo.project);
@@ -100,4 +104,58 @@ const putModules = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { createProject, putModules };
+const putProject = asyncHandler(async (req, res) => {
+  const { historyState, projectId } = req.body.params;
+  if (historyState) {
+    try {
+      const project = await Project.findById(projectId);
+      if (!project) {
+        res.status(404);
+        throw new Error("Project not found");
+      }
+
+      project.historyState = historyState;
+      console.log("History State updated");
+      const updatedProject = await project.save();
+      console.log(
+        "after updating HistoryState : ",
+        updatedProject.historyState
+      );
+      res
+        .status(200)
+        .json(
+          "project State for project",
+          updatedProject.projectName,
+          "has been updated to ",
+          updatedProject.historyState
+        );
+    } catch (error) {
+      console.error("Error white updating the HistoryState:", error);
+      res.status(500).json({ error: error.message });
+    }
+  }
+});
+
+const deleteProject = asyncHandler(async (req, res) => {
+  try {
+    const { ProjectID } = req.params;
+    if (!ProjectID) {
+      res.status(400);
+      throw new Error("Project id is mandatory to delete specific project");
+    } else {
+      const project = await ProjectModel.findOne({ _id: ProjectID });
+
+      if (!project) {
+        res.status(404);
+        throw new Error("Project not found or wrong project id");
+      }
+
+      await ProjectModel.findByIdAndDelete(project._id);
+      console.log(project.projectName, "Deleted");
+      res.status(201).json(project);
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+module.exports = { createProject, putModules, putProject, deleteProject };

@@ -58,6 +58,9 @@ const Dashboards = () => {
 
           <div className="tdDiv">
             {devData.project.map((project, index) => {
+              if (project.historyState) {
+                return;
+              }
               const totalModules = project.modules.length;
               const totalProgress = project.modules.reduce(
                 (sum, module) => sum + (module.moduleProgress + 1),

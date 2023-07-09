@@ -1,8 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./subdashboard.scss";
 import { UserContext } from "../../context/userContext";
-const SubDashboard = ({ projectIndex }) => {
-  const { userdata } = useContext(UserContext);
+import historyTransfer from "../../assets/parchment.png";
+import axios from "axios";
+
+const SubDashboard = ({ projectIndex, setprojectIndex }) => {
+  const { userdata, setuserdata } = useContext(UserContext);
   const [projectData, setProjectData] = useState(
     userdata.projects[projectIndex - 1]
   );
@@ -14,6 +17,49 @@ const SubDashboard = ({ projectIndex }) => {
   }, [projectIndex]);
 
   const th = ["No", "module_name", "progress", "test_score", "Code Submission"];
+
+  const getDownloadLink = async () => {
+    const data = { projectData };
+    const jsonText = JSON.stringify(data, null, 2);
+    const element = document.createElement("a");
+    const file = new Blob([jsonText], { type: "text/plain" });
+    element.href = URL.createObjectURL(file);
+    element.download = "data.txt";
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  };
+  const transferHistory = async (hindex) => {
+    try {
+      const response = await axios.put(
+        `http://localhost:5000/admin/projectUpdate`,
+        {
+          params: {
+            historyState: true,
+            projectId: projectData._id,
+          },
+        }
+      );
+      console.log("put request for history response : ", response);
+      const updatedProjectData = {
+        ...projectData,
+        historyState: !projectData.historyState,
+      };
+
+      const updatedProjects = userdata.projects.map((project, index) => {
+        if (index === hindex) {
+          return updatedProjectData;
+        }
+        return project;
+      });
+      console.log(updatedProjects);
+      setuserdata({ ...userdata, projects: updatedProjects });
+      setprojectIndex("");
+    } catch (err) {
+      console.log("error from put request ", err);
+    }
+  };
+
   return (
     <div className="subdash">
       <div className="projectName">{projectData.projectName}</div>
@@ -72,6 +118,17 @@ const SubDashboard = ({ projectIndex }) => {
             });
           })}
         </div>
+        <button className="downloadbutton" onClick={() => getDownloadLink()}>
+          Download Data
+        </button>
+        <img
+          onClick={() => {
+            transferHistory(projectIndex - 1);
+          }}
+          src={historyTransfer}
+          alt="historyTransfer"
+          className="historyTransfer"
+        />
       </div>
     </div>
   );

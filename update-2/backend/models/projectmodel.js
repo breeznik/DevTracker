@@ -49,6 +49,9 @@ const projectSchema = mongoose.Schema(
       type: [],
       required: true,
     },
+    historyState: {
+      type: Boolean,
+    },
   },
   {
     timestamps: true,

@@ -24,8 +24,8 @@ const SubDashboard = ({ projectIndex }) => {
   }, [projectIndex]);
 
   const th = ["No", "module_name", "progress", "test_score", "Code Submission"];
-  const getDownloadLink = async (filepath) => {
-    const filelistRef = ref(storage, filepath);
+  const getDownloadLink = async () => {
+    // const filelistRef = ref(storage, filepath);
 
     // const downloadUrl = await getDownloadURL(filelistRef);
     // console.log("downlaod url ", downloadUrl);
@@ -95,14 +95,7 @@ const SubDashboard = ({ projectIndex }) => {
         </div>
         <div className="subth-Discription">Discription</div>
         <div className="discription">{projectData.description}</div>
-        <button
-          className="downloadbutton"
-          onClick={() =>
-            getDownloadLink(
-              "projects/64a94110369f84b7e30626d1/1bc9a28c-5062-4306-9ca6-f30310833ac8/finalMap.pdf_uuid_489a9021-f578-4ede-8336-e5c7c39c24b3projects/648b347699b11b6b347eed60"
-            )
-          }
-        >
+        <button className="downloadbutton" onClick={() => getDownloadLink()}>
           Download Data
         </button>
       </div>

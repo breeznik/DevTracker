@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
 .dashboard {
   display: flex;
   width: 100%;
@@ -127,6 +129,7 @@
           flex-direction: row;
           // align-items: center;
           // justify-content: center;
+
           .td {
             display: flex;
             flex-direction: row;
@@ -145,6 +148,249 @@
           }
         }
       }
+    }
+  }
+  .hIconContainer {
+    position: absolute;
+    right: 50px;
+    bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    letter-spacing: 0.07em;
+    &:hover {
+      background-color: lightgray;
+      color: black;
+      transition: all 0.15s ease-in-out;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+    .historyIcon {
+      width: 60.72px;
+      height: 63.969px;
+    }
+  }
+}
+
+.historyBoard {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  .History {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 110px;
+    align-self: center;
+    justify-self: center;
+
+    .HistoryHeading {
+      font-family: "VT323", monospace;
+      height: 5%;
+      margin-top: 30px;
+      font-size: 35px;
+    }
+  }
+
+  .historyContent {
+    display: flex;
+    width: 74%;
+    height: 60vh;
+    position: absolute;
+    top: 215px;
+    flex-direction: column;
+    .historyProjectHeading {
+      color: white;
+      font-family: "VT323", monospace;
+      height: 5%;
+      margin-top: 30px;
+      color: #fff;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 2.5px;
+    }
+    .data {
+      display: flex;
+      gap: 63px;
+      margin-left: 118px;
+      margin-top: 50px;
+      //text
+      font-family: VT323;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 2px;
+      .projectNameTable {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 245px;
+        height: fit-content;
+
+        label {
+          left: 155px;
+          align-self: center;
+          position: absolute;
+          top: 70px;
+          text-align: center;
+          color: black;
+          padding: 0 8px;
+          height: 24px;
+          flex-shrink: 0;
+          border-radius: 3px;
+          background: #f5f5dc;
+        }
+        li {
+          cursor: pointer;
+          padding: 8px 44px;
+          &:hover {
+            background: rgba(128, 0, 128, 0.65);
+          }
+        }
+      }
+      .moduleNameTable {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 245px;
+        height: fit-content;
+        label {
+          position: absolute;
+          top: 70px;
+          text-align: center;
+          color: black;
+          width: 99px;
+          height: 24px;
+          flex-shrink: 0;
+          border-radius: 3px;
+          background: #f5f5dc;
+        }
+        li {
+          cursor: pointer;
+          padding: 8px 44px;
+          &:hover {
+            background: rgba(0, 116, 217, 0.65);
+          }
+        }
+      }
+      .fileNameTable {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 245px;
+        height: fit-content;
+
+        label {
+          position: absolute;
+          top: 70px;
+          text-align: center;
+          color: black;
+          width: 99px;
+          height: 24px;
+          flex-shrink: 0;
+          border-radius: 3px;
+          background: #f5f5dc;
+        }
+        li {
+          cursor: pointer;
+          min-width: 44px;
+          padding: 8px;
+          &:hover {
+            background: rgba(46, 204, 64, 0.65);
+          }
+        }
+      }
+    }
+  }
+
+  .historyButtons {
+    // border: 1px solid white;
+    position: absolute;
+    bottom: 113px;
+    right: 220px;
+    display: flex;
+    gap: 50px;
+
+    //text
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+    .deleteProject {
+      position: relative;
+      display: flex;
+      width: 213px;
+      height: 41px;
+      background: #ff851b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease-in-out;
+      &:hover {
+        transform: scale(1.08);
+      }
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+
+    .downloadeAll {
+      width: 213px;
+      height: 41px;
+      background: #d9d9d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease-in-out;
+      &:hover {
+        transform: scale(1.08);
+      }
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  .hIconContainer {
+    position: absolute;
+    right: 50px;
+    bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    letter-spacing: 0.07em;
+    transition: all 0.15s ease-in-out;
+    &:hover {
+      background-color: lightgray;
+      color: black;
+      transition: all 0.15s ease-in-out;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+    .historyIcon {
+      width: 60.72px;
+      height: 63.969px;
     }
   }
 }
