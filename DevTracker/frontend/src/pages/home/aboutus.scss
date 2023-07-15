@@ -1,0 +1,61 @@
+.about {
+  position: absolute;
+  width: 1411px;
+  height: 571px;
+  border-radius: 5px;
+  background: #000;
+  top: 208px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  animation-name: smalltobig;
+  animation-duration: 0.4s;
+  justify-content: center;
+  @keyframes smalltobig {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+  .AboutUsContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    .AboutUsHeading {
+      color: #068fff;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+      letter-spacing: 3.2px;
+      text-transform: uppercase;
+      position: relative;
+      top: 30px;
+      margin-bottom: 86px;
+    }
+
+    .aboutUsP {
+      display: flex;
+      width: 1317px;
+      flex-direction: column;
+      flex-shrink: 0;
+      color: #fff;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+      letter-spacing: 2.56px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+  }
+}
