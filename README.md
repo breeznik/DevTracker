@@ -1,5 +1,5 @@
-****
-Project Overview****
+
+**Project Overview**
 
 DevTracker is a comprehensive web application designed to
 streamline project management and tracking, providing a
